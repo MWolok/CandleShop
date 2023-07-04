@@ -1,0 +1,10 @@
+.brand_container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+   
+}
+.brand{
+    display: flex;
+    flex-direction: column;
+}

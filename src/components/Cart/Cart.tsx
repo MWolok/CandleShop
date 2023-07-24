@@ -1,13 +1,14 @@
 import React from "react";
 import { Candle } from "../Candles/Candle";
 import './Cart.css'
+import Modal from "../Layout/Modal/Modal";
 
 export default function Cart(props: any) {
 const cartItems:Candle[] = [];
 
 
 	return (
-		<div>
+		<Modal>
             <ul className="cart-items">
                 {cartItems.map(can => <li>{can.color}</li>)}
             </ul>
@@ -20,6 +21,6 @@ const cartItems:Candle[] = [];
         <button className="button--alt">Close</button>
         <button className="button">Order</button>
             </div>
-		</div>
+		</Modal>
 	);
 }

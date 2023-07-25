@@ -1,26 +1,29 @@
 import React from "react";
 import { Candle } from "../Candles/Candle";
-import './Cart.css'
+import "./Cart.css";
 import Modal from "../Layout/Modal/Modal";
 
 export default function Cart(props: any) {
-const cartItems:Candle[] = [];
-
+	const cartItems: Candle[] = [
+		{ id: 12, size: "midium", smell: "vanila", price: 12, color: "red" },
+	];
 
 	return (
-		<Modal>
-            <ul className="cart-items">
-                {cartItems.map(can => <li>{can.color}</li>)}
-            </ul>
-            
+		<Modal showModal={props.onShow}>
+			<ul className="cart-items">
+				{cartItems.map((can) => (
+					<li key={can.id}>{can.color}</li>
+				))}
+			</ul>
+
 			<div className="total">
-                <span>Total amount</span>
-                <span>111</span>
-            </div>
+				<span>Total amount</span>
+				<span>111</span>
+			</div>
 			<div className="actions">
-        <button className="button--alt">Close</button>
-        <button className="button">Order</button>
-            </div>
+				<button className="button--alt">Close</button>
+				<button className="button">Order</button>
+			</div>
 		</Modal>
 	);
 }

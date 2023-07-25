@@ -1,17 +1,24 @@
-import React from "react";
-import BackDrop from "./BackDrop";
-import ModalOverlay from "./ModalOverlay";
+import { useState } from "react";
+
+import Modal from "react-bootstrap/Modal";
 import ReactDOM from "react-dom";
-import './Modal.css'
 
-export default function Modal(props: any) {
-const portalElement = document.getElementById('overlays')
+function ModalComp(props: any) {
+	// const [show, setShow] = useState(false);
 
+	// const handleClose = () => setShow(false);
+	// const handleShow = () => setShow(true);
 
 	return (
 		<>
-			{/* {ReactDOM.createPortal(<BackDrop/>,portalElement!)} */}
-			{ReactDOM.createPortal(<ModalOverlay>{props.children}</ModalOverlay>,portalElement!)}
+			<Modal show={props.showModal} >
+				<Modal.Header closeButton>
+					<Modal.Title>Modal heading</Modal.Title>
+				</Modal.Header>
+				<Modal.Body>{props.children}</Modal.Body>
+			</Modal>
 		</>
 	);
 }
+
+export default ModalComp;

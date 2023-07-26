@@ -6,16 +6,16 @@ import Cart from "./components/Cart/Cart";
 import Modal from "./components/Layout/Modal/Modal";
 
 function App() {
-	const [showCart, setShowCart] = useState(true);
-
+	const [showCart, setShowCart] = useState(false);
+	console.log(showCart);
 	const handleClose = () => setShowCart(false);
 	const handleShow = () => setShowCart(true);
 
 	return (
 		<>
-			<Header onhandleClose={handleShow}></Header>
+			<Header onHandleClose={handleShow}></Header>
 
-			<Cart onShow={showCart}></Cart>
+			<Cart onHide={handleClose} onShow={showCart}></Cart>
 			<main>
 				<Candles />
 			</main>

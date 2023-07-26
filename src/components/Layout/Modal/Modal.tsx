@@ -12,7 +12,7 @@ function ModalComp(props: any) {
 	return (
 		<>
 			<Modal show={props.showModal} >
-				<Modal.Header closeButton>
+				<Modal.Header closeButton onClick={props.hideModal}>
 					<Modal.Title>Modal heading</Modal.Title>
 				</Modal.Header>
 				<Modal.Body>{props.children}</Modal.Body>

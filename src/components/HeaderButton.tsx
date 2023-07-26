@@ -4,7 +4,7 @@ import '../components/HeaderButton.css'
 
 export default function HeaderButton(props:any) {
 	return (
-		<button className="button">
+		<button className="button" onClick={props.onClick}>
 			<span className="icon"><CartIcon/></span>
 			<span>Your Cart</span>
             {/* Cart items num */}

@@ -9,7 +9,7 @@ export default function Cart(props: any) {
 	];
 
 	return (
-		<Modal showModal={props.onShow}>
+		<Modal  hideModal={props.onHide} showModal={props.onShow}>
 			<ul className="cart-items">
 				{cartItems.map((can) => (
 					<li key={can.id}>{can.color}</li>
@@ -21,7 +21,7 @@ export default function Cart(props: any) {
 				<span>111</span>
 			</div>
 			<div className="actions">
-				<button className="button--alt">Close</button>
+				<button className="button button--alt">Close</button>
 				<button className="button">Order</button>
 			</div>
 		</Modal>

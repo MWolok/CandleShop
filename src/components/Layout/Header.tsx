@@ -15,7 +15,7 @@ export default function Header(props: any) {
 						<BrnadLogo></BrnadLogo>
 					</Navbar.Brand>
 					<Nav className="me-auto"></Nav>
-					<HeaderButton onClick={props.onhandleClose} />
+					<HeaderButton onClick={props.onHandleClose} />
 				</Container>
 			</Navbar>
 			<div className="main-image">

@@ -20,11 +20,15 @@ export const CartProvider = (props: React.PropsWithChildren) => {
 	const [amount, setAmount] = useState(0);
 
 	const addItem = (item: Candle) => {
+
 		setItems([...items, item]);
+		setAmount((prevAmount) => prevAmount+1)
 	};
 	const removeItem = (id: number) => {
+		if(amount>1){
 		const newArray = items.filter((item) => item.id !== id);
 		setItems(newArray);
+		setAmount((prevAmount) => prevAmount-1)}
 	};
     return (
         <CartContext.Provider

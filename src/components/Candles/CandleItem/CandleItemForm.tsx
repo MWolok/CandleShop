@@ -3,8 +3,12 @@ import "./CandleItemForm.css";
 import Input from "../../Layout/Input";
 
 export default function CandleItemForm(props: any) {
+	const submitHandler = (event: any) => {
+		event.preventDefault();
+	}
+
 	return (
-		<form className="form" action="">
+		<form className="form" onSubmit={submitHandler}>
 			<Input
 				label="Amount"
 				input={{

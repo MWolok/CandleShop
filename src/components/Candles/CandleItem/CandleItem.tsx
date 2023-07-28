@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Candle } from "../Candle";
 import "./CandleItem.css";
 import CandleItemForm from "./CandleItemForm";
+import { CartContext } from "../../store/CartContext";
 
 export default function CandleItem(props: Candle) {
-	const price = `${props.price.toFixed(2)}zl`;
+	const cart = useContext(CartContext); 
 
+	const price = `${props.price.toFixed(2)}zl`;
+	const addToCartHandler = (amount: number) => {
+		cart.addItem(props);
+	};
 	return (
 		<li className="can">
 			<div>
@@ -14,7 +19,9 @@ export default function CandleItem(props: Candle) {
 				<div className="price">{price}</div>
 			</div>
 			<div>
-				<CandleItemForm id={props.id}></CandleItemForm>
+				<CandleItemForm
+					onAddToCart={addToCartHandler}
+					id={props.id}></CandleItemForm>
 			</div>
 		</li>
 	);

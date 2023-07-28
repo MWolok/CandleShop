@@ -5,7 +5,7 @@ import { CartContext } from "./store/CartContext";
 
 export default function HeaderButton(props: any) {
 	const cart = useContext(CartContext);
-
+	console.log(cart.totalAmount);
 	return (
 		<button className="button" onClick={props.onClick}>
 			<span className="icon">
@@ -15,7 +15,7 @@ export default function HeaderButton(props: any) {
 			{/* Cart items num */}
 			<span className="badge">
 				{cart.items.reduce((number, item) => {
-					return number + cart.totalAmount;
+					return 0 + cart.totalAmount;
 				}, 0)}
 			</span>
 		</button>

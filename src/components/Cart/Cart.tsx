@@ -3,30 +3,40 @@ import { Candle } from "../Candles/Candle";
 import "./Cart.css";
 import Modal from "../Layout/Modal/Modal";
 import { CartContext } from "../store/CartContext";
+import CartItem from "./CartItem";
 
 export default function Cart(props: any) {
-
 	const cart = useContext(CartContext);
+	const hasItems: boolean = cart.items.length > 0;
+	let price: number = 0;
+	price.toFixed(2);
 
-
+	const cartItemRemoveHandler = (id: number) => {};
+	const cartItemAddHandler = (item: Candle) => {};
 
 	return (
-		<Modal  hideModal={props.onHide} showModal={props.onShow}>
+		<Modal hideModal={props.onHide} showModal={props.onShow}>
 			<ul className="cart-items">
 				{cart.items.map((can) => (
-					<li key={can.id}>{can.color}</li>
+					<CartItem
+						onRemove={cartItemRemoveHandler.bind(null, can.id)}
+						onAdd={cartItemAddHandler.bind(null, can)}
+						key={can.id}
+						{...can}></CartItem>
 				))}
 			</ul>
 
 			<div className="total">
 				<span>Total amount</span>
-				<span>{cart.items.reduce((num:number,item:Candle)=>{
-					return num + item.price
-				},0)}</span>
+				<span>
+					{cart.items.reduce((num: number, item: Candle) => {
+						return (price = num + item.price);
+					}, 0)}
+				</span>
 			</div>
-			<div className="actions">
+			<div className="action">
 				<button className="button button--alt">Close</button>
-				<button className="button">Order</button>
+				{hasItems && <button className="button">Order</button>}
 			</div>
 		</Modal>
 	);

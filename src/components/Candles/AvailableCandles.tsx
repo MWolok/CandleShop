@@ -8,7 +8,7 @@ import CandleItem from './CandleItem/CandleItem';
  const candles: Candle[] = [
     {
       id: 1,
-      amount:0,
+      amount:1,
       color: "Red",
       size: "Medium",
       smell: "Rose",
@@ -16,7 +16,7 @@ import CandleItem from './CandleItem/CandleItem';
     },
     {
       id: 2,
-      amount:0,
+      amount:1,
       color: "Blue",
       size: "Large",
       smell: "Ocean Breeze",
@@ -24,7 +24,7 @@ import CandleItem from './CandleItem/CandleItem';
     },
     {
       id: 3,
-      amount:0,
+      amount:1,
       color: "Purple",
       size: "Small",
       smell: "Lavender",
@@ -32,7 +32,7 @@ import CandleItem from './CandleItem/CandleItem';
     },
     {
       id: 4,
-      amount:0,
+      amount:1,
       color: "Brown",
       size: "Medium",
       smell: "Cinnamon",
@@ -40,7 +40,7 @@ import CandleItem from './CandleItem/CandleItem';
     },
     {
       id: 5,
-      amount:0,
+      amount:1,
       color: "Ivory",
       size: "Tealight",
       smell: "Vanilla",
@@ -48,7 +48,7 @@ import CandleItem from './CandleItem/CandleItem';
     },
     {
       id: 6,
-      amount:0,
+      amount:1,
       color: "Beige",
       size: "Large",
       smell: "Sandalwood and Amber",
@@ -56,7 +56,7 @@ import CandleItem from './CandleItem/CandleItem';
     },
     {
       id: 7,
-      amount:0,
+      amount:1,
       color: "Green",
       size: "Small",
       smell: "Eucalyptus Mint",
@@ -64,7 +64,7 @@ import CandleItem from './CandleItem/CandleItem';
     },
     {
       id: 8,
-      amount:0,
+      amount:1,
       color: "White",
       size: "Taper",
       smell: "Fresh Linen",
@@ -72,7 +72,7 @@ import CandleItem from './CandleItem/CandleItem';
     },
     {
       id: 9,
-      amount:0,
+      amount:1,
       color: "Yellow",
       size: "Medium",
       smell: "Citrus Burst",
@@ -80,7 +80,7 @@ import CandleItem from './CandleItem/CandleItem';
     },
     {
       id: 10,
-      amount:0,
+      amount:1,
       color: "Dark Green",
       size: "Medium",
       smell: "Patchouli and Cedarwood",

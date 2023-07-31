@@ -3,11 +3,14 @@ import "./CandleItemForm.css";
 import Input from "../../Layout/Input";
 
 export default function CandleItemForm(props: any) {
-	const amountInputRef = useRef(0);
+	const amountInputRef = useRef<HTMLInputElement>(null);
 	const submitHandler = (event: any) => {
 		event.preventDefault();
-		const amount = + amountInputRef.current.valueOf;
-		props.onAddToCart(amount);
+		const amount = amountInputRef.current?.value;
+		const ammountToNumber = +amount!;
+		console.log(ammountToNumber)
+		console.log(amountInputRef);
+		props.onAddToCart(ammountToNumber);
 	};
 
 	return (

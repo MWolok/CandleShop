@@ -19,37 +19,36 @@ export const CartProvider = (props: React.PropsWithChildren) => {
 	const [amount, setAmount] = useState(0);
 
 	const addItem = (item: Candle) => {
-		
 		const idOfExistingItem = items.findIndex((it) => it.id === item.id);
-		
+
 		if (idOfExistingItem !== -1) {
-			console.log("true")
-		
-		
+			console.log("true");
+
 			const updatedItems = items.map((it, index) =>
-			index === idOfExistingItem ? { ...it, amount: it.amount + 1 } : it
-		  );
-		  setItems(updatedItems);
-			// const updateObject = { ...items[idOfExistingItem], amount: amount + 1 };
-			// const updateState = [
-			// 	...items.slice(9, idOfExistingItem),
-			// 	updateObject,
-			// 	...items.slice(idOfExistingItem + 1),
-			// ];
-			// setItems(updateState);
-			// return;
-		}else {
+				index === idOfExistingItem ? { ...it, amount: it.amount + 1 } : it
+			);
+			setItems(updatedItems);
+		} else {
 			setItems([...items, item]);
 		}
 
-		
 		setAmount((prevAmount) => prevAmount + 1);
 	};
 
 	const removeItem = (id: number) => {
-		if (amount > 1) {
-			const newArray = items.filter((item) => item.id !== id);
-			setItems(newArray);
+		const existingItem = items.find((item) => item.id === id);
+
+		if (existingItem) {
+			if (existingItem.amount > 1) {
+				const updatedItems = items.map((item) =>
+					item.id === id ? { ...item, amount: item.amount - 1 } : item
+				);
+				setItems(updatedItems);
+			} else {
+				const updatedItems = items.filter((item) => item.id !== id);
+				setItems(updatedItems);
+			}
+
 			setAmount((prevAmount) => prevAmount - 1);
 		}
 	};

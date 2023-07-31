@@ -9,7 +9,7 @@ export default function CandleItem(props: Candle) {
 
 
 	const addToCartHandler = (amount: number) => {
-		cart.addItem(props);
+		cart.addItem({...props, amount:amount});
 	};
 	return (
 		<li className="can">

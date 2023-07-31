@@ -11,8 +11,13 @@ export default function Cart(props: any) {
 	let price: number = 0;
 	price.toFixed(2);
 
-	const cartItemRemoveHandler = (id: number) => {};
-	const cartItemAddHandler = (item: Candle) => {};
+	const cartItemRemoveHandler = (id: number) => {
+		cart.removeItem(id);
+	};
+	const cartItemAddHandler = (item: Candle) => {
+		cart.addItem({ ...item, amount: 1 });
+		console.log("Add");
+	};
 
 	return (
 		<Modal hideModal={props.onHide} showModal={props.onShow}>
@@ -30,7 +35,7 @@ export default function Cart(props: any) {
 				<span>Total amount</span>
 				<span>
 					{cart.items.reduce((num: number, item: Candle) => {
-						return (price = num + item.price);
+						return (price = num + item.price * item.amount);
 					}, 0)}
 				</span>
 			</div>

@@ -15,6 +15,16 @@ export default function Header(props: any) {
 						<BrnadLogo></BrnadLogo>
 					</Navbar.Brand>
 					<Nav className="me-auto"></Nav>
+					<button  className="button-nav">
+						REGISTER
+					</button>
+					<button  className="button-nav">
+						LogIn
+					</button>
+					<button  className="button-nav">
+						Account
+					</button>
+
 					<HeaderButton onClick={props.onHandleClose} />
 				</Container>
 			</Navbar>

@@ -4,6 +4,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Candles from "./components/Candles/Candles";
 import Cart from "./components/Cart/Cart";
 import Modal from "./components/Layout/Modal/Modal";
+import RegisterPage from "./components/Layout/RegisterPage";
 
 function App() {
 	const [showCart, setShowCart] = useState(false);
@@ -14,11 +15,11 @@ function App() {
 	return (
 		<>
 			<Header onHandleClose={handleShow}></Header>
-
-			<Cart onHide={handleClose} onShow={showCart}></Cart>
+<RegisterPage></RegisterPage>
+			{/* <Cart onHide={handleClose} onShow={showCart}></Cart>
 			<main>
 				<Candles />
-			</main>
+			</main> */}
 		</>
 	);
 }

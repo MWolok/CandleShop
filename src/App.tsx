@@ -15,11 +15,11 @@ function App() {
 	return (
 		<>
 			<Header onHandleClose={handleShow}></Header>
-<RegisterPage></RegisterPage>
-			{/* <Cart onHide={handleClose} onShow={showCart}></Cart>
+{/* <RegisterPage></RegisterPage> */}
+			<Cart onHide={handleClose} onShow={showCart}></Cart>
 			<main>
 				<Candles />
-			</main> */}
+			</main>
 		</>
 	);
 }

@@ -16,7 +16,7 @@ export default function Header(props: any) {
 					</Navbar.Brand>
 					<Nav className="me-auto"></Nav>
 					<button  className="button-nav">
-						REGISTER
+						Register
 					</button>
 					<button  className="button-nav">
 						LogIn

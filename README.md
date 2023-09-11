@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+# Candle Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Candle Shop is an ongoing project built with React TypeScript, HTML, CSS, and styled using Bootstrap. It's a candle store where you can add candles to your cart from a list. In the cart, you can see the prices of the candles and edit the contents of the cart.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+- React with TypeScript
+- HTML
+- CSS
+- Bootstrap (provide the version of Bootstrap you use)
 
-### `npm start`
+## Running the Application
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To run this application on your computer, follow these steps:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Clone this repository to your computer using the following command:
 
-### `npm test`
+   ```bash
+   git clone https://github.com/yourusername/candle-shop.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Using the Application
+-Open the application in your web browser.
+-Browse the list of available candles.
+-Add candles to your cart by clicking on them.
+-In the cart, view the prices of the candles.
+-Edit the contents of your cart as needed.
+-Candle Shop is a work in progress and is continuously being developed to offer more features and functionality.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![2023-09-11_15h29_26](https://github.com/MWolok/CandleShop/assets/86103240/37769a4d-5c73-40f8-9619-296db9929a27)
+![2023-09-11_15h30_13](https://github.com/MWolok/CandleShop/assets/86103240/b2aa0354-57b1-47b5-b516-f13fa3e31dff)
